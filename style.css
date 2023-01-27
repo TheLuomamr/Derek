@@ -1,0 +1,16 @@
+body{
+    height: 100%;
+    background-color: #ffcc99 ;
+    margin: 10px 10px 10px 10px;
+
+}
+
+.img-fluid {
+object-fit: cover;
+max-width: 100%;
+height:auto;
+justify-content: center;
+display: block;
+margin-left: auto;
+margin-right: auto;
+border: 10px solid black;}
