@@ -1,20 +1,28 @@
 body{
     height: 100%;
-    background-color: #ffcc99 ;
+    background-image: url(./images/pexels-mahima-1250260.jpg);
+    background-size: contain;
     margin: 10px 10px 10px 10px;
 
 }
-header{
+h1{
+    color:white;
     font-family: 'Secular One', sans-serif;
     text-align: center;
-    font-size: 2.5vw;
     margin: 30px 4px 15px 4px
+}
+h4{
+    color:white;
+    font-family: 'Secular One', sans-serif;
+    text-align: center;
+    margin: 5px 4px 15px 4px
+
 }
 
 
 .img-fluid {
     object-fit: cover;
-    max-width: 100%;
+    max-width: 90%;
     height:auto;
     justify-content: center;
     display: block;
