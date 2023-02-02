@@ -1,7 +1,7 @@
 image = new Array()
 image[1] = "./images/1.jpg"
 image[2] = "./images/2.jpg"
-image[3] = "./images/3.jpg"
+image[3] = "./images/3.jpeg"
 image[4] = "./images/4.jpeg"
 image[5] = "./images/5.jpeg"
 image[6] = "./images/6.jpeg"
