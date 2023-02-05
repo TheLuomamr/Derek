@@ -32,6 +32,79 @@ image[30] = "./images/30.jpeg"
 image[31] = "./images/31.jpeg"
 
 var currentdate = new Date()
-var imagenumber = currentdate.getDate()
+var imagenumber = currentdate.getDate();
 
-document.write('<img class=img-fluid src="' + image[imagenumber] + '">')
+// console.log(image[imagenumber]);
+
+
+
+//document.write('<img class=img-fluid  src="' + image[imagenumber] + '" >')
+
+// function test(){
+
+//     var newElement = document.getElementById('photo');
+//     newElement.src=image[imagenumber];
+//     newElement.classList.add('img-fluid')
+
+//     var photo = document.getElementById('testDiv');
+//     photo.appendChild(newElement);
+
+//     console.log(newElement);
+
+// }
+
+// test();
+//////////////
+function test2(){
+
+    var newElement = document.getElementById('myImg');
+    newElement.src=image[imagenumber];
+    newElement.classList.add('img-fluid')
+
+    var photo = document.getElementById('testDiv2');
+    photo.appendChild(newElement);
+
+    console.log(newElement);
+
+}
+
+test2();
+
+
+///////MODAL//////
+
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+////DATE&TIME/////
+
+document.getElementById("para1").innerHTML = formatAMPM();
+
+function formatAMPM() {
+var d = new Date(),
+    minutes = d.getMinutes().toString().length == 1 ? '0'+d.getMinutes() : d.getMinutes(),
+    // hours = d.getHours().toString().length == 1 ? '0'+d.getHours() : d.getHours(),
+    ampm = d.getHours() >= 12 ? 'pm' : 'am',
+    months = ['January','February','March','April','May','June','July','August','September','October','November','December'],
+    days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+return days[d.getDay()]+' '+months[d.getMonth()]+' '+d.getDate()+' '+ ' , '+d.getFullYear()+' ' //+hours+':'+minutes+ampm;
+}
